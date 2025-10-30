@@ -2,6 +2,9 @@
 
 A clean and responsive dashboard built with React.js to manage and view product data.
 
+### ( Live Preview )
+https://product-management-dashboard-amber.vercel.app/
+
 ## Features
 
 - **View Products**: Display products in a customizable table
