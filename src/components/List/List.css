@@ -1,0 +1,160 @@
+.list-container {
+  background: var(--surface);
+  border-radius: 12px;
+  overflow: auto;
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--border);
+}
+
+.list-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.list-table th {
+  background: var(--surface-hover);
+  padding: 16px 20px;
+  text-align: left;
+  font-weight: 600;
+  color: var(--text-primary);
+  border-bottom: 2px solid var(--border);
+  cursor: pointer;
+  user-select: none;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.list-table th.sortable:hover {
+  background: var(--primary-light);
+  color: var(--primary);
+}
+
+.sort-icon {
+  margin-left: 8px;
+  font-size: 12px;
+  color: var(--primary);
+}
+
+.list-table td {
+  padding: 12px 20px;
+  border-bottom: 1px solid var(--border);
+  vertical-align: top;
+  position: relative;
+  transition: background-color 0.2s ease;
+}
+
+.list-table tr:last-child td {
+  border-bottom: none;
+}
+
+.list-table tr:hover {
+  background: var(--surface-hover);
+}
+
+.cell-content {
+  min-height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.cell-content img {
+  max-width: 50px;
+  max-height: 50px;
+  object-fit: contain;
+  border-radius: 6px;
+}
+
+.cell-content.editable {
+  cursor: pointer;
+  padding: 8px 12px;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+  margin: -8px -12px;
+}
+
+.cell-content.editable:hover {
+  background: var(--primary-light);
+  border: 1px dashed var(--primary);
+}
+
+.edit-hint {
+  opacity: 0;
+  transition: opacity 0.2s;
+  font-size: 12px;
+  color: var(--primary);
+}
+
+.cell-content.editable:hover .edit-hint {
+  opacity: 1;
+}
+
+.editing-cell {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: -8px -12px;
+  padding: 8px 12px;
+  background: var(--primary-light);
+  border-radius: 6px;
+  border: 1px solid var(--primary);
+}
+
+.edit-input {
+  flex: 1;
+  padding: 8px 12px;
+  border: 1px solid var(--primary);
+  border-radius: 6px;
+  font-size: 14px;
+  background: var(--surface);
+  color: var(--text-primary);
+}
+
+.edit-input:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.edit-actions {
+  display: flex;
+  gap: 4px;
+}
+
+.save-btn,
+.cancel-btn {
+  padding: 6px 10px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 12px;
+  transition: all 0.2s ease;
+}
+
+.save-btn {
+  background: var(--success);
+  color: white;
+}
+
+.save-btn:hover {
+  background: #0da271;
+  transform: scale(1.05);
+}
+
+.cancel-btn {
+  background: var(--error);
+  color: white;
+}
+
+.cancel-btn:hover {
+  background: #dc2626;
+  transform: scale(1.05);
+}
+
+.no-data {
+  text-align: center;
+  padding: 60px 20px;
+  color: var(--text-muted);
+  font-style: italic;
+  font-size: 1.1rem;
+}
